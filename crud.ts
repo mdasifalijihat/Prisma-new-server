@@ -49,12 +49,29 @@ async function run() {
 
 // user deleted 
 
-const userDeleted = await prisma.user.delete({
-  where: {
-    email: "jihat@gmail.com",
-  },
-});
-console.log(userDeleted)
+// const userDeleted = await prisma.user.delete({
+//   where: {
+//     email: "jihat@gmail.com",
+//   },
+// });
+// console.log(userDeleted)
+
+// const upsertUser = await prisma.user.upsert({
+//   where: {
+//     email: "asif@gmail.com",
+//   },
+//   update: {
+//     name: "Viola the Magnificent",
+//   },
+//   create: {
+//     email: "viola@prisma.io",
+//     name: "Viola the Magnificent",
+//   },
+// });
+
+// console.log(upsertUser)
+
+
 }
 
 run();
