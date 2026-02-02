@@ -24,13 +24,37 @@ async function run() {
 
   // profile create
 
-//   const createProfile = await prisma.profile.create({
+  //   const createProfile = await prisma.profile.create({
+  //     data: {
+  //       bio: "web dev at PH",
+  //       userId: 2,
+  //     },
+  //   });
+  //   console.log(createProfile);
+
+  // user data
+
+  // const user = await prisma.user.findMany();
+  // console.log(user)
+
+//   const updateUser = await prisma.profile.update({
+//     where: {
+//       userId: 1,
+//     },
 //     data: {
-//       bio: "web dev at PH",
-//       userId: 2,
+//       bio: "helo your ss",
 //     },
 //   });
-//   console.log(createProfile);
+//   console.log(updateUser);
+
+// user deleted 
+
+const userDeleted = await prisma.user.delete({
+  where: {
+    email: "jihat@gmail.com",
+  },
+});
+console.log(userDeleted)
 }
 
 run();
